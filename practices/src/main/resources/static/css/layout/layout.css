@@ -1,0 +1,27 @@
+.header {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.header .navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0; /* Align vertically */
+    line-height: 1; /* Adjust line height */
+}
+
+.header .btn-primary {
+    border-radius: 5px; /* Make the button less rounded */
+    font-size: 18px;
+    line-height: 1.5; /* Adjust line height for button */
+    padding: 5px 10px; /* Adjust padding for more space */
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align items vertically */
+    padding: 0; /* Remove extra padding */
+}
+
