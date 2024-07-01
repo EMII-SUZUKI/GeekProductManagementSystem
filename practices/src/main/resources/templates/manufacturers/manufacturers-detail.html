@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/layout}">
+
+<head>
+	<meta charset="UTF-8">
+	<title>メーカ詳細</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/layout.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+
+<body>
+	<div layout:fragment="content">
+		<div class="container">
+			 <main>
+			            <h2>メーカ詳細</h2>
+			            <table>
+			                <tr>
+			                    <th>メーカNo</th>
+			                    <td th:text="${manufacturer.id}"></td>
+			                </tr>
+			                <tr>
+			                    <th>メーカ名</th>
+			                    <td th:text="${manufacturer.name}"></td>
+			                </tr>
+			            </table>
+			            <div class="button-group">
+			                <a th:href="@{/manufacturers/edit/{id}(id=${manufacturer.id})}">
+			                    <button>登録内容を編集する</button>
+			                </a>
+							<br>
+			                <form th:action="@{/manufacturers/delete/{id}(id=${manufacturer.id})}" method="post" style="display:inline;">
+			                    <button type="submit">この店舗を削除する</button>
+			                </form>
+							<br>
+			                <a th:href="@{/manufacturers}">
+			                    <button>メーカ一覧に戻る</button>
+			                </a>
+			            </div>
+			        </main>
+			    </div>
+			</div>
+			</body>
+			</html>
