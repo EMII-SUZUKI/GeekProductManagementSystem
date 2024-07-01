@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>メーカ編集</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/layout.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+
+<body>
+<div layout:fragment="content">
+    <div class="container">
+        <main>
+            <h2>メーカ編集</h2>
+            <form th:action="@{/manufacturers/update}" method="post">
+                <div>
+                    <label for="id">メーカNo</label>
+                    <input type="text" id="id" th:value="${manufacturer.id}" name="id" readonly>
+                </div>
+                <div>
+                    <label for="name">メーカ名</label>
+                    <input type="text" id="name" th:value="${manufacturer.name}" name="name">
+                </div>
+                <div class="button-group">
+                    <button type="submit">更新する</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</div>
+</body>
+</html>
+

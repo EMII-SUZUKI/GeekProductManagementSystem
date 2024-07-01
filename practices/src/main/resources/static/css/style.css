@@ -1,0 +1,21 @@
+
+/* メーカー一覧ページのスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse; /* ボーダーを一重線に変更 */
+}
+
+table, th, td {
+    border: 1px solid black; /* ボーダーの色とスタイルを指定 */
+}
+
+th, td {
+    padding: 8px; /* セルのパディングを指定 */
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* ボタンを中央揃え */
+}
+

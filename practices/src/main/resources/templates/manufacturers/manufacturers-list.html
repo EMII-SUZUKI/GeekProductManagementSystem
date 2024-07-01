@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layout/layout}">
+
+<head>
+	<meta charset="UTF-8">
+	<title>メーカ一覧</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/css/layout.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+
+<body>
+	<div layout:fragment="content">
+		<div class="container">
+			<main>
+			        <h2>メーカ一覧</h2>
+			        <table>
+			            <thead>
+			                <tr>
+			                    <th>メーカーID</th>
+			                    <th>メーカー名</th>
+			                    <th>操作</th>
+			                </tr>
+			            </thead>
+			            <tbody>
+			                <tr th:each="manufacturer : ${manufacturers}">
+			                    <td th:text="${manufacturer.id}"></td>
+			                    <td th:text="${manufacturer.name}"></td>
+			                    <td class="center-button">
+			                        <a th:href="@{/manufacturers/{id}(id=${manufacturer.id})}">
+			                            <button>詳細</button>
+			                        </a>
+			                    </td>
+			                </tr>
+			            </tbody>
+			        </table>
+			    </main>
+		</div>
+	</div>
+</body>
+</html>
